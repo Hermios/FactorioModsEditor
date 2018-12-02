@@ -28,5 +28,8 @@
     <Setting Name="FactorioModPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:/Application Data/Factorio/mods/</Value>
     </Setting>
+    <Setting Name="DestinationZip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:/Users/Nicolas/Desktop</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

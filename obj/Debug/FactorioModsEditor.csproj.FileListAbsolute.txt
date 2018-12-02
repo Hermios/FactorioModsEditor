@@ -1,0 +1,17 @@
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\FactorioModsEditor.csprojAssemblyReference.cache
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MainWindow.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Entity\View\EntityView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\GuiElement\View\GuiElementView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\GuiElement\View\_GuiElementView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Item\View\ItemView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Parameters\View\ParametersView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Project\View\ProjectView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Prototype\PrototypeView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Recipe\View\RecipeView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\MVVM\Technology\View\TechnologyView.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\App.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\FactorioModEnvironnment_MarkupCompile.cache
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\FactorioModEnvironnment_MarkupCompile.lref
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\FactorioModEnvironnment.exe
+D:\Programms\CSharp\FactorioTools\FactorioModsEditor\obj\Debug\FactorioModEnvironnment.pdb
