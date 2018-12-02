@@ -1,0 +1,32 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FactorioModEnvironnment.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FactorioProgramFiles" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Program Files/Factorio/</Value>
+    </Setting>
+    <Setting Name="definesHtml" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">doc-html/defines.html</Value>
+    </Setting>
+    <Setting Name="luaLibsPaths" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;data&lt;/string&gt;
+  &lt;string&gt;data/core&lt;/string&gt;
+  &lt;string&gt;data/core/lualib&lt;/string&gt;
+  &lt;string&gt;data/base&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="luaInitFiles" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;data/core/lualib/dataloader.lua&lt;/string&gt;
+  &lt;string&gt;data/core/data.lua&lt;/string&gt;
+  &lt;string&gt;data/base/data.lua&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FactorioModPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:/Application Data/Factorio/mods/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

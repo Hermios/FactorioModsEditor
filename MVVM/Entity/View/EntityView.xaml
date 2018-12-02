@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="FactorioModEnvironnment.MVVM.Entity.EntityView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FactorioModEnvironnment.MVVM.Entity"
+             xmlns:paramView="clr-namespace:FactorioModEnvironnment.MVVM.Parameters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="type"/>
+            <ComboBox IsEditable="True" Grid.Column="1" ItemsSource="{Binding PossibleTypes}" SelectedValue="{Binding selectedType}" Margin="5"/>
+            <Label Grid.Column="2" Content="original Name"/>
+            <ComboBox Grid.Column="3" ItemsSource="{Binding candidateOriginalNames}" SelectedValue="{Binding originalName}" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="1" Margin="5" Visibility="{Binding isNotEquipment,Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <CheckBox Grid.Row="0" Content="gui" IsChecked="{Binding hasGui}"/>
+            <CheckBox Grid.Row="1" Content="own file" IsChecked="{Binding hasOwnFile}"/>
+            <CheckBox Grid.Row="2" Content="constructor" IsChecked="{Binding hasConstructor}"/>
+            <CheckBox Grid.Row="3" Content="global" IsChecked="{Binding isSavedInGlobal}"/>
+        </Grid>
+        <TabControl Grid.Row="2">
+            <TabItem Header="Parameters">
+                <paramView:ParametersView DataContext="{Binding listParameters}" />
+            </TabItem>
+            <TabItem Header="Events">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox Grid.Row="0" Content="on add" IsChecked="{Binding onAdd}"/>
+                    <CheckBox Grid.Row="1" Content="on remove" IsChecked="{Binding onRemove}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Gui" Visibility="{Binding hasGui,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox Content="Can open function" IsChecked="{Binding hasCanOpen}" Margin="5"/>
+                    <TreeView Grid.Row="1">
+
+                    </TreeView>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</UserControl>

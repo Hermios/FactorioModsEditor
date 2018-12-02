@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="FactorioModEnvironnment.MVVM.Project.ProjectView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FactorioModEnvironnment.MVVM.Project"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Folder Path"/>
+            <TextBox Grid.Column="1" Text="{Binding FolderPath}" Margin="5" Grid.ColumnSpan="2"/>
+            <Button Grid.Column="3" Content="Browse"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Project Name"/>
+            <TextBox Grid.Column="1" Text="{Binding projectName}" Margin="5"/>
+            <Label Grid.Column="2" Content="Project Title"/>
+            <TextBox Grid.Column="3" Text="{Binding projectTitle}" Margin="5"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Mod description"/>
+            <TextBox Grid.Column="1" TextWrapping="Wrap" AcceptsTab="True" AcceptsReturn="True" Text="{Binding projectDescription}"/>
+        </Grid>
+        <GroupBox Grid.Row="3">
+            <GroupBox.Header>
+                <Label Content="Items"></Label>
+            </GroupBox.Header>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <ListView Grid.Row="0" ItemsSource="{Binding listItems}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Path=itemType}"/>
+                                <Label Content="{Binding Path=originalItem}"/>
+                                <Label Content="{Binding Path=newItem}"/>
+                                <Button Content="Edit Item" Command="{Binding onEditItem}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" />
+                                <Button Content="Remove Item" Command="{Binding onRemoveItem}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Grid.Row="1" Content="Add Equipment Grid" Command="{Binding onAddNewEquipmentGrid}" HorizontalAlignment="Left" Margin="5" />
+                <Button Grid.Row="1" Content="Add Item" Command="{Binding onAddNewItem}" HorizontalAlignment="Right" Margin="5"/>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column="0"  Content="Generate Mod"   Command="{Binding onGenerateProject}" HorizontalAlignment="Center" />
+            <Button  Grid.Column="1"  Content="Cancel"   Command="{Binding onCancel}" HorizontalAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</UserControl>
